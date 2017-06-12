@@ -6,9 +6,9 @@ using Prova1.DAL;
 
 namespace Prova1.Controller
 {
-    public class FuncionariosController //: BaseController
+    public class FuncionariosController : BaseController
     {
-       protected static CallEntities contexto = new CallEntities();
+       //protected static CallEntities contexto = new CallEntities();
 
         public static void AdicionarFunc(Funcionario funcionario)
         {

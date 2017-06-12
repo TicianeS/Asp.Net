@@ -6,10 +6,10 @@ using Prova1.DAL;
 
 namespace Prova1.Controller
 {
-    public class HoraExtraController //: BaseController
+    public class HoraExtraController : BaseController
     {
 
-       protected static CallEntities contexto = new CallEntities();
+       //protected static CallEntities contexto = new CallEntities();
 
         public static void AdicionarHE(HorasExtra horaExtra)
         {
