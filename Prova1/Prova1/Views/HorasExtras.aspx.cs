@@ -92,6 +92,8 @@ namespace Prova1.Views
 
         protected void LimparCampos()
         {
+            txtIdFunc.Enabled = true;
+            txtNomeFunc.Enabled = false;
             txtIdFunc.Text = "";
             txtNomeFunc.Text = "";
             txtDataHe.Text = "";
@@ -106,25 +108,15 @@ namespace Prova1.Views
 
         protected void btnListarHe_Click(object sender, EventArgs e)
         {
-           /* if (txtDtPesq.Text.Equals(""))
-            {*/
                 gvwHorasExtras.DataSource = HoraExtraController.ListarHE();
                 gvwHorasExtras.DataBind();
-           /* }
-            else
-            {
-                DateTime dataPesq;
-                dataPesq = Convert.ToDateTime(txtDtPesq.Text);
-                gvwHorasExtras.DataSource = HoraExtraController.PesquisarHE(dataPesq);
-                gvwHorasExtras.DataBind();
-            }*/
         }
 
 
 
         protected void btnCadastrar_Click(object sender, EventArgs e)
         {
-            /*
+            
             int id = 0;
 
             if (!txtIdFunc.Text.Equals(""))
@@ -198,154 +190,104 @@ namespace Prova1.Views
 
                 }
 
-            }*/
-
-            int id = 0;
-
-            if (!txtIdFunc.Text.Equals(""))
-            {
-                id = int.Parse(txtIdFunc.Text);
-            }
-
-
-            Funcionario f = new Funcionario();
-
-            f = FuncionariosController.PesquisarFunc(id);
-
-            if (f == null)
-            {
-                lblPesq.Text = "Funcionário não cadastrado";
-                LimparCampos();
-
-            }
-            else
-            {
-                txtNomeFunc.Text = f.Nome;
-
-                DateTime ini, fim, total, data;
-
-                if (!txtDataHe.Text.Equals(""))
-                {
-                    if (!txtDtInicio.Text.Equals("") && !txtDtFim.Text.Equals(""))
-                    {
-                        ini = Convert.ToDateTime(txtDtInicio.Text);
-
-                        fim = Convert.ToDateTime(txtDtFim.Text);
-
-                        if (fim >= ini)
-                        {
-                            string hr;
-                            hr = (fim - ini).ToString();
-                            data = Convert.ToDateTime(txtDataHe.Text);
-
-                            HorasExtra he = new HorasExtra();
-                            he.Funcionario = f;
-                            he.Data = data;
-                            he.Inicio = ini;
-                            he.Fim = fim;
-                            he.Horas = Convert.ToDateTime(hr);
-                            he.Funcionario_Id = f.Id;
-
-                            try
-                            {
-                                HoraExtraController.AdicionarHE(he);
-                                lblPesq.Text = "Foram cadastradas " + hr + " horas extras com sucesso";
-                            }
-                            catch (Exception erro)
-                            {
-                                lblPesq.Text = "Ocorreu um erro ao salvar as horas extras";
-                            }
-                        }
-                        else
-                        {
-                            lblPesq.Text = "O horário final deve ser maior do que o inicial";
-                        }
-                    }
-                    else
-                    {
-                        lblPesq.Text = "Por favor, preencha os horários para a hora extra";
-                    }
-                }
-                else
-                {
-                    lblPesq.Text = "Por favor, preencha a data para a hora extra";
-
-                }
-
             }
         }
 
         protected void btnAlterar_Click(object sender, EventArgs e)
         {
+            
+            }
+
+        protected void btnExcluir_Click(object sender, EventArgs e)
+        {
+            HorasExtra he = new HorasExtra();
+            int id = int.Parse(txtIdFunc.Text);
+            DateTime data = Convert.ToDateTime(txtDtPesq.Text);
+            he = HoraExtraController.PesquisarHEporIDeData(data, id);
+
+            try
+            {
+                HoraExtraController.ExcluirHE(he);
+                lblPesq.Text = "Cadastro excluído com sucesso";
+                LimparCampos();
+            }
+            catch (Exception erro)
+            {
+                lblPesq.Text = "Ocorreu um erro ao excluir os dados";
+            }
+        }
+
+        protected void btnAlterar_Click1(object sender, EventArgs e)
+        {
             int id = 0;
 
             id = int.Parse(txtIdFunc.Text);
-            
-                DateTime ini, fim, data, dataOrig;
 
-                if (!txtDataHe.Text.Equals(""))
+            DateTime ini, fim, data, dataOrig;
+
+            if (!txtDataHe.Text.Equals(""))
+            {
+                if (!txtDtInicio.Text.Equals("") && !txtDtFim.Text.Equals(""))
                 {
-                    if (!txtDtInicio.Text.Equals("") && !txtDtFim.Text.Equals(""))
+                    ini = Convert.ToDateTime(txtDtInicio.Text);
+
+                    fim = Convert.ToDateTime(txtDtFim.Text);
+
+                    if (fim >= ini)
                     {
-                        ini = Convert.ToDateTime(txtDtInicio.Text);
+                        data = Convert.ToDateTime(txtDataHe.Text);
+                        dataOrig = Convert.ToDateTime(txtDtPesq.Text);
 
-                        fim = Convert.ToDateTime(txtDtFim.Text);
-
-                        if (fim >= ini)
+                        if (data == dataOrig || HoraExtraController.PesquisarHEporIDeData(data, id) == null)
                         {
-                            data = Convert.ToDateTime(txtDataHe.Text);
-                            dataOrig = Convert.ToDateTime(txtDtPesq.Text);
 
-                            if (HoraExtraController.PesquisarHEporIDeData(data, id) != null)
+                            string hr;
+                            hr = (fim - ini).ToString();
+
+                            HorasExtra he = new HorasExtra();
+
+                            he = HoraExtraController.PesquisarHEporIDeData(dataOrig, id);
+                            he.Data = data;
+                            he.Inicio = ini;
+                            he.Fim = fim;
+                            he.Horas = Convert.ToDateTime(hr);
+                            he.Funcionario_Id = id;
+
+                            try
                             {
-                                
-                                string hr;
-                                hr = (fim - ini).ToString();
-                                
-                                HorasExtra he = new HorasExtra();
-
-                                he = HoraExtraController.PesquisarHEporIDeData(dataOrig, id);
-                                he.Data = data;
-                                he.Inicio = ini;
-                                he.Fim = fim;
-                                he.Horas = Convert.ToDateTime(hr);
-                                he.Funcionario_Id = id;
-
-                                try
-                                {
-                                    HoraExtraController.AlterarHE(he);
-                                    lblPesq.Text = "Hora extra alterada com sucesso";
-                                    LimparCampos();
-                                }
-                                catch (Exception erro)
-                                {
-                                    lblPesq.Text = "Ocorreu um erro ao alterar as horas extras";
-                                }
-                             }
-                            else
+                                HoraExtraController.AlterarHE(he);
+                                lblPesq.Text = "Hora extra alterada com sucesso";
+                                LimparCampos();
+                            }
+                            catch (Exception erro)
                             {
-                                lblPesq.Text = "Este funcionário já possui horas extras cadastradas nesta nova data";
+                                lblPesq.Text = "Ocorreu um erro ao alterar as horas extras";
                             }
                         }
                         else
                         {
-                            lblPesq.Text = "O horário final deve ser maior do que o inicial";
+                            lblPesq.Text = "Este funcionário já possui horas extras cadastradas nesta nova data";
                         }
                     }
                     else
                     {
-                        lblPesq.Text = "Por favor, preencha os horários para a hora extra";
+                        lblPesq.Text = "O horário final deve ser maior do que o inicial";
                     }
                 }
                 else
                 {
-                    lblPesq.Text = "Por favor, preencha a data para a hora extra";
-
+                    lblPesq.Text = "Por favor, preencha os horários para a hora extra";
                 }
+            }
+            else
+            {
+                lblPesq.Text = "Por favor, preencha a data para a hora extra";
 
             }
 
-        protected void btnExcluir_Click(object sender, EventArgs e)
+        }
+
+        protected void btnExcluir_Click1(object sender, EventArgs e)
         {
             HorasExtra he = new HorasExtra();
             int id = int.Parse(txtIdFunc.Text);

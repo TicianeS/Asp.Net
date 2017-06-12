@@ -41,9 +41,9 @@
     <p>
         <asp:Button ID="btnCadastrar" runat="server" Text="Cadastrar" Width="95px" OnClick="btnCadastrar_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnAlterar" runat="server" Text="Alterar" Width="95px" />
+        <asp:Button ID="btnAlterar" runat="server" Text="Alterar" Width="95px" OnClick="btnAlterar_Click1" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnExcluir" runat="server" Text="Excluir" Width="95px" />
+        <asp:Button ID="btnExcluir" runat="server" Text="Excluir" Width="95px" OnClick="btnExcluir_Click1" />
     </p>
     <p>
         &nbsp;</p>

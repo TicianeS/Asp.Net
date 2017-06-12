@@ -6,9 +6,9 @@ using Prova1.DAL;
 
 namespace Prova1.Controller
 {
-    public class FuncionariosController
+    public class FuncionariosController //: BaseController
     {
-        protected static CallEntities contexto = new CallEntities();
+       protected static CallEntities contexto = new CallEntities();
 
         public static void AdicionarFunc(Funcionario funcionario)
         {
@@ -40,7 +40,7 @@ namespace Prova1.Controller
         {
             var local = contexto.Set<Funcionario>().Local.FirstOrDefault(x => x.Id == funcionario.Id);
 
-            contexto.Entry(local).State = System.Data.Entity.EntityState.Detached;
+           contexto.Entry(local).State = System.Data.Entity.EntityState.Detached;
 
             contexto.Entry(funcionario).State =
                   System.Data.Entity.EntityState.Deleted;

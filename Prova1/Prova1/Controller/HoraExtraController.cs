@@ -6,10 +6,10 @@ using Prova1.DAL;
 
 namespace Prova1.Controller
 {
-    public class HoraExtraController
+    public class HoraExtraController //: BaseController
     {
 
-        protected static CallEntities contexto = new CallEntities();
+       protected static CallEntities contexto = new CallEntities();
 
         public static void AdicionarHE(HorasExtra horaExtra)
         {
@@ -37,7 +37,7 @@ namespace Prova1.Controller
 
         public static void AlterarHE(HorasExtra horaExtra)
         {
-        var local = contexto.Set<HorasExtra>().Local.FirstOrDefault(x => x.Id == horaExtra.Id);
+          var local = contexto.Set<HorasExtra>().Local.FirstOrDefault(x => x.Id == horaExtra.Id);
 
             contexto.Entry(local).State = System.Data.Entity.EntityState.Detached;
             contexto.Entry(horaExtra).State =
