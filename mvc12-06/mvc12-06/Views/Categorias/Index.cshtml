@@ -1,11 +1,19 @@
-﻿
+﻿@model IEnumerable <Mvc1206.Models.Categoria>
 @{
     ViewBag.Title = "Categorias";
 }
 
-<h2>@ViewBag.Title</h2>
+@*
+    <h2>@ViewBag.Title</h2>
 
-@foreach(string cat in ViewBag.ListaCategorias)
+    @foreach(string cat in ViewBag.ListaCategorias)
+    {
+        <p>@cat</p>
+    }
+*@
+
+@foreach (var cat in Model)
 {
-    <p>@cat</p>
+    <b>@cat.Nome</b>
+    <p>@cat.Descricao</p>
 }
