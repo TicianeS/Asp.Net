@@ -6,7 +6,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <br />
     <asp:TextBox ID="txtIdFunc" runat="server" ></asp:TextBox>
-    <asp:Button ID="btnPesquisar" runat="server" OnClick="btnPesquisar_Click" Text="Pesquisar" Width="95px" />
+    <asp:Button ID="btnPesquisar" runat="server" OnClick="btnPesquisar_Click" Text="Pesquisar" Width="95px" class="btn btn-primary"/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:Label ID="lblPesq" runat="server"></asp:Label>
     <br />
@@ -28,15 +28,15 @@
     <asp:TextBox ID="txtDtAdmi" runat="server"></asp:TextBox>
     <br />
     <br />
-    <asp:Button ID="btnCadastrar" runat="server" OnClick="btnCadastrar_Click" Text="Cadastrar" />
-    <asp:Button ID="btnAlterar" runat="server" OnClick="btnAlterar_Click" Text="Alterar" Width="95px" />
-    <asp:Button ID="btnExcluir" runat="server" Text="Excluir" Width="95px" OnClick="btnExcluir_Click" />
+    <asp:Button ID="btnCadastrar" runat="server" OnClick="btnCadastrar_Click" Text="Cadastrar" class="btn btn-success"/>
+    <asp:Button ID="btnAlterar" runat="server" OnClick="btnAlterar_Click" Text="Alterar" Width="95px" class="btn btn-success"/>
+    <asp:Button ID="btnExcluir" runat="server" Text="Excluir" Width="95px" OnClick="btnExcluir_Click" class="btn btn-success"/>
     <br />
     <br />
     <br />
     <br />
     <br />
-    <asp:Button ID="btnListarFunc" runat="server" OnClick="btnListarFunc_Click" Text="Listar Funcionários" />
+    <asp:Button ID="btnListarFunc" runat="server" OnClick="btnListarFunc_Click" Text="Listar Funcionários" class="btn btn-primary" />
     <br />
     <br />
     <br />

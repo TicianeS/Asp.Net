@@ -17,9 +17,15 @@ namespace Prova1.Views
             btnAlterar.Enabled = false;
             btnExcluir.Enabled = false;
             btnCadastrar.Enabled = true;
+            CarregarGrid();
         }
 
         protected void btnListarFunc_Click(object sender, EventArgs e)
+        {
+            CarregarGrid();
+        }
+
+        private void CarregarGrid()
         {
             gvwFuncionarios.DataSource = FuncionariosController.ListarFunc();
             gvwFuncionarios.DataBind();
@@ -82,6 +88,7 @@ namespace Prova1.Views
             {
                 FuncionariosController.AlterarFunc(f);
                 lblPesq.Text = "Cadastro alterado com sucesso";
+                CarregarGrid();
                 LimparCampos();
             }
             catch (Exception erro)
