@@ -12,7 +12,21 @@ namespace Modelos
         [Key]
         public int FuncionarioID { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
+        [StringLength(80, ErrorMessage = "Tamanho máximo de 80 caracteres")]
         public string Nome { get; set; }
+
+        [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
+        [StringLength(80, ErrorMessage = "Tamanho máximo de 80 caracteres")]
+        [Display(Name ="Endereço")]
+        public string Endereco { get; set; }
+
+        [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
+        [StringLength(30, ErrorMessage = "Tamanho máximo de 30 caracteres")]
+        public string Cidade { get; set; }
+
+        [RegularExpression("^[(][1 - 9]{2}[)] (?:[2-8]|9[1-9])[0-9]{3}[-][0-9]{4}$")]
+        public string Telefone { get; set; }
+
     }
 }

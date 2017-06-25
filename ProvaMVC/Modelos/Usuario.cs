@@ -10,6 +10,7 @@ namespace Modelos
     public class Usuario
     {
         [Key]
+        [ScaffoldColumn(false)]
         public int UsuarioID { get; set; }
 
         [Required(ErrorMessage ="Campo de preenchimento obrigatório")]
@@ -22,8 +23,13 @@ namespace Modelos
         public string Senha { get; set; }
 
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
-        
         public string Perfil { get; set; }
+
+        [Display(Name = "Matrícula do Funcionário")]
+        [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
+        public int FuncionarioID { get; set; }
+
+        public virtual Funcionario _Funcionario { get; set; }
 
     }
 }
