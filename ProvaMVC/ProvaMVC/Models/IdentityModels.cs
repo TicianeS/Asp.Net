@@ -32,5 +32,19 @@ namespace ProvaMVC.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Modelos.Ausencia> Ausencias { get; set; }
+
+        public System.Data.Entity.DbSet<Modelos.Cargo> Cargoes { get; set; }
+
+        public System.Data.Entity.DbSet<Modelos.Departamento> Departamentoes { get; set; }
+
+        public System.Data.Entity.DbSet<Modelos.Funcionario> Funcionarios { get; set; }
+
+        public System.Data.Entity.DbSet<Modelos.Escala> Escalas { get; set; }
+
+        public System.Data.Entity.DbSet<Modelos.HoraExtra> HoraExtras { get; set; }
+
+        public System.Data.Entity.DbSet<Modelos.Usuario> Usuarios { get; set; }
     }
 }
