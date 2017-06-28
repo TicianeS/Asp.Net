@@ -13,22 +13,19 @@ namespace Modelos
         [ScaffoldColumn(false)]
         public int UsuarioID { get; set; }
 
-        //[Required(ErrorMessage ="Campo de preenchimento obrigatório")]
-        //[StringLength(10, MinimumLength = 5, ErrorMessage = "O login deve conter de 5 a 10 caracteres")]
-        //public string Login { get; set; }
+        [Required(ErrorMessage ="Campo de preenchimento obrigatório")]
+        [StringLength(10, MinimumLength = 5, ErrorMessage = "O login deve conter de 5 a 10 caracteres")]
+        public string Login { get; set; }
 
-        //[Required(ErrorMessage = "Campo de preenchimento obrigatório")]
-        //[StringLength(10, MinimumLength = 4, ErrorMessage = "A senha deve conter de 4 a 10 caracteres")]
-        //[DataType(DataType.Password)]
-        //public string Senha { get; set; }
-
-        // chave do usuario (ASP.Net) no sistema 
-        public string AspNetUserID { get; set; }
+        [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
+        [StringLength(10, MinimumLength = 4, ErrorMessage = "A senha deve conter de 4 a 10 caracteres")]
+        [DataType(DataType.Password)]
+        public string Senha { get; set; }
 
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
         public string Perfil { get; set; }
 
-        [Display(Name = "Matrícula do Funcionário")]
+        [Display(Name = "Nome do Funcionário")]
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
         public int FuncionarioID { get; set; }
 
