@@ -44,7 +44,9 @@
     <Compile Include="Ausencia.cs" />
     <Compile Include="Cargo.cs" />
     <Compile Include="Departamento.cs" />
+    <Compile Include="Escala.cs" />
     <Compile Include="Funcionario.cs" />
+    <Compile Include="HoraExtra.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
