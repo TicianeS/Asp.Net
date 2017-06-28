@@ -196,15 +196,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AusenciasController.cs" />
-    <Compile Include="Controllers\CargoesController.cs" />
-    <Compile Include="Controllers\DepartamentosController.cs" />
-    <Compile Include="Controllers\EscalasController.cs" />
     <Compile Include="Controllers\FuncionariosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\HorasExtrasController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -272,41 +266,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Ausencias\Create.cshtml" />
-    <Content Include="Views\Ausencias\Delete.cshtml" />
-    <Content Include="Views\Ausencias\Details.cshtml" />
-    <Content Include="Views\Ausencias\Edit.cshtml" />
-    <Content Include="Views\Ausencias\Index.cshtml" />
-    <Content Include="Views\Cargoes\Create.cshtml" />
-    <Content Include="Views\Cargoes\Delete.cshtml" />
-    <Content Include="Views\Cargoes\Details.cshtml" />
-    <Content Include="Views\Cargoes\Edit.cshtml" />
-    <Content Include="Views\Cargoes\Index.cshtml" />
-    <Content Include="Views\Departamentos\Create.cshtml" />
-    <Content Include="Views\Departamentos\Delete.cshtml" />
-    <Content Include="Views\Departamentos\Details.cshtml" />
-    <Content Include="Views\Departamentos\Edit.cshtml" />
-    <Content Include="Views\Departamentos\Index.cshtml" />
-    <Content Include="Views\Escalas\Create.cshtml" />
-    <Content Include="Views\Escalas\Delete.cshtml" />
-    <Content Include="Views\Escalas\Details.cshtml" />
-    <Content Include="Views\Escalas\Edit.cshtml" />
-    <Content Include="Views\Escalas\Index.cshtml" />
     <Content Include="Views\Funcionarios\Create.cshtml" />
     <Content Include="Views\Funcionarios\Delete.cshtml" />
     <Content Include="Views\Funcionarios\Details.cshtml" />
     <Content Include="Views\Funcionarios\Edit.cshtml" />
     <Content Include="Views\Funcionarios\Index.cshtml" />
-    <Content Include="Views\HorasExtras\Create.cshtml" />
-    <Content Include="Views\HorasExtras\Delete.cshtml" />
-    <Content Include="Views\HorasExtras\Details.cshtml" />
-    <Content Include="Views\HorasExtras\Edit.cshtml" />
-    <Content Include="Views\HorasExtras\Index.cshtml" />
-    <Content Include="Views\Usuarios\Create.cshtml" />
-    <Content Include="Views\Usuarios\Delete.cshtml" />
-    <Content Include="Views\Usuarios\Details.cshtml" />
-    <Content Include="Views\Usuarios\Edit.cshtml" />
-    <Content Include="Views\Usuarios\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -14,14 +14,16 @@ namespace Modelos
         public int EscalaID { get; set; }
 
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
-        [RegularExpression("^(0[1-9]|[12][0-9]|3[01])[-/.](0[1-9]|1[012])[-/.](19|20)[00-99]$")]
+        [RegularExpression("^(0[1-9]|[12][0-9]|3[01])[-/.](0[1-9]|1[012])[-/.](19|20)[00-99]$",
+            ErrorMessage ="A data deve ser preenchida como dd/mm/aaaa")]
         public DateTime Data { get; set; }
 
         [Display(Name = "Matrícula do Funcionário")]
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
         public int FuncionarioID { get; set; }
 
-        [ScaffoldColumn(false)]
+        [Display(Name = "Escala")]
+        [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
         public int AusenciaID { get; set; }
 
         

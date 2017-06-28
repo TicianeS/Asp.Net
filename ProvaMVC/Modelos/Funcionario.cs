@@ -10,6 +10,7 @@ namespace Modelos
     public class Funcionario
     {
         [Key]
+        [Display(Name ="Matrícula do funcionário")]
         public int FuncionarioID { get; set; }
 
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
@@ -25,7 +26,7 @@ namespace Modelos
         [StringLength(30, ErrorMessage = "Tamanho máximo de 30 caracteres")]
         public string Cidade { get; set; }
 
-        [RegularExpression("^[(][1 - 9]{2}[)] (?:[2-8]|9[1-9])[0-9]{3}[-][0-9]{4}$")]
+        [RegularExpression("^[0-9]{2}\\s[0-9]{4}-[0-9]{4}$", ErrorMessage ="O telefone deve ser do seguinte formato: 00 0000-0000")]
         public string Telefone { get; set; }
 
     }
