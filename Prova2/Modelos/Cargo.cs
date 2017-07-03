@@ -14,7 +14,7 @@ namespace Modelos
         public int CargoID { get; set; }
 
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
-        [StringLength(30, ErrorMessage = "Tamanho máximo de 30 caracteres")]
+        [StringLength(30, MinimumLength = 5, ErrorMessage = "Tamanho máximo de 30 caracteres")]
         public string Nome { get; set; }
     }
 }

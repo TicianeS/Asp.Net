@@ -17,6 +17,8 @@ namespace Modelos
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
         public int FuncionarioID { get; set; }
 
+        [Display(Name = "Nome do Funcionário")]
+        [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
         public virtual Funcionario _Funcionario { get; set; }
 
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]

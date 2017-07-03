@@ -37,5 +37,13 @@ namespace Prova2.Models
         public System.Data.Entity.DbSet<Modelos.Cargo> Cargoes { get; set; }
 
         public System.Data.Entity.DbSet<Modelos.Funcionario> Funcionarios { get; set; }
+
+        public System.Data.Entity.DbSet<Modelos.Escala> Escalas { get; set; }
+
+        public System.Data.Entity.DbSet<Modelos.Ausencia> Ausencias { get; set; }
+
+        public System.Data.Entity.DbSet<Modelos.HoraExtra> HoraExtras { get; set; }
+
+        public System.Data.Entity.DbSet<Modelos.Usuario> Usuarios { get; set; }
     }
 }

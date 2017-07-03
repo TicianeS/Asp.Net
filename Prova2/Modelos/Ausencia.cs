@@ -14,11 +14,11 @@ namespace Modelos
         public int AusenciaID { get; set; }
 
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
-        [StringLength(25, ErrorMessage = "Tamanho máximo de 25 caracteres")]
+        [StringLength(25, MinimumLength = 2, ErrorMessage = "Tamanho máximo de 25 caracteres")]
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
-        [StringLength(3, ErrorMessage = "Tamanho máximo de 3 caracteres")]
+        [StringLength(3, MinimumLength = 2, ErrorMessage = "Tamanho máximo de 3 caracteres")]
         public string Sigla { get; set; }
 
 

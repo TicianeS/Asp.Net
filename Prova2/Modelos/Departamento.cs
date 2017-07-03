@@ -15,9 +15,10 @@ namespace Modelos
         public int DepartamentoID { get; set; }
 
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
-        [RegularExpression("^([01]?[0-9]|2[0-3]):[0-5][0-9]$", ErrorMessage = "O horário deve ter o formato 00:00")]
+        [RegularExpression("^([0-1][0-9]|2[0-3]):[0-5][0-9]$", ErrorMessage = "O horário deve ter o formato 00:00")]
+        [DataType(DataType.Time)]
         [Display(Name = "Horário de entrada")]
-        public string Horario { get; set; }
+        public DateTime Horario { get; set; }
 
         
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
@@ -34,8 +35,8 @@ namespace Modelos
         [Display(Name = "Supervisor")]
         public int SupervisorID { get; set; }
 
-        
-        
+
+        [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
         [ForeignKey("SupervisorID")]
         public virtual Funcionario _Supervisor { get; set; }
 
@@ -44,8 +45,8 @@ namespace Modelos
         public int CargoID { get; set; }
 
 
-        
-       
+
+        [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
         public virtual Cargo _Cargo { get; set; }
 
 
