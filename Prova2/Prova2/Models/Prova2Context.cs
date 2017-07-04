@@ -19,10 +19,10 @@ namespace Prova2.Models
         public Prova2Context() : base("name=Prova2Context")
         {
             // apaga e cria semrpre
-            Database.SetInitializer<Prova2Context>(new DropCreateDatabaseAlways<Prova2Context>());
+           // Database.SetInitializer<Prova2Context>(new DropCreateDatabaseAlways<Prova2Context>());
             
             // apaga e cria se mudar as modelos
-            //Database.SetInitializer<Prova2Context>(new DropCreateDatabaseIfModelChanges<Prova2Context>());
+            Database.SetInitializer<Prova2Context>(new DropCreateDatabaseIfModelChanges<Prova2Context>());
             
             // apaga e cria se nao existir base ainda 
             //Database.SetInitializer<Prova2Context>(new CreateDatabaseIfNotExists<Prova2Context>());
