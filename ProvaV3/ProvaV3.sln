@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvaV3", "ProvaV3\ProvaV3.csproj", "{11887833-98F4-4BFF-932D-CD655636732A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelos", "Modelos\Modelos.csproj", "{2A4A3AFD-8EF8-4FED-97A8-3BCB9937F28E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11887833-98F4-4BFF-932D-CD655636732A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11887833-98F4-4BFF-932D-CD655636732A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11887833-98F4-4BFF-932D-CD655636732A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11887833-98F4-4BFF-932D-CD655636732A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A4A3AFD-8EF8-4FED-97A8-3BCB9937F28E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A4A3AFD-8EF8-4FED-97A8-3BCB9937F28E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A4A3AFD-8EF8-4FED-97A8-3BCB9937F28E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A4A3AFD-8EF8-4FED-97A8-3BCB9937F28E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
