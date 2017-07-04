@@ -16,7 +16,7 @@ namespace Modelos
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
         [RegularExpression("^([0-2][0-9]|3[0-1])/(0[1-9]|1[0-2])/(201[7-9])$",
             ErrorMessage = "A data deve ser preenchida como dd/mm/aaaa")]
-        public DateTime Data { get; set; }
+        public string Data { get; set; }
 
         [Display(Name = "Funcionário")]
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]

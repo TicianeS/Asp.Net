@@ -16,9 +16,8 @@ namespace Modelos
 
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
         [RegularExpression("^([0-1][0-9]|2[0-3]):[0-5][0-9]$", ErrorMessage = "O horário deve ter o formato 00:00")]
-        [DataType(DataType.Time)]
         [Display(Name = "Horário de entrada")]
-        public DateTime Horario { get; set; }
+        public string Horario { get; set; }
 
         
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]

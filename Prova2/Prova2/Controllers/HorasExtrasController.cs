@@ -49,7 +49,7 @@ namespace Prova2.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "HoraExtraID,FuncionarioID,Data,Horas,Inicio,Fim")] HoraExtra horaExtra)
+        public ActionResult Create([Bind(Include = "HoraExtraID,Nome,Data,Horas,Inicio,Fim")] HoraExtra horaExtra)
         {
             if (ModelState.IsValid)
             {

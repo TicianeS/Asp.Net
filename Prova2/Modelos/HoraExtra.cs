@@ -19,25 +19,26 @@ namespace Modelos
 
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
         [RegularExpression("^([0-2][0-9]|3[0-1])/(0[1-9]|1[0-2])/(201[7-9])$", ErrorMessage = "A data deve ser preenchida como dd/mm/aaaa")]
-        public DateTime Data { get; set; }
+        public string Data { get; set; }
 
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
         [RegularExpression("^([0-1][0-9]|2[0-3]):[0-5][0-9]$", ErrorMessage = "O horário deve ter o formato 00:00")]
-        [DataType(DataType.Time)]
-        public DateTime Horas { get; set; }
+
+       
+        public string Horas { get; set; }
 
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
         [RegularExpression("^([0-1][0-9]|2[0-3]):[0-5][0-9]$", ErrorMessage = "O horário deve ter o formato 00:00")]
-        [DataType(DataType.Time)]
-        public DateTime Inicio { get; set; }
+       
+        public string Inicio { get; set; }
 
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
         [RegularExpression("^([0-1][0-9]|2[0-3]):[0-5][0-9]$", ErrorMessage = "O horário deve ter o formato 00:00")]
-        [DataType(DataType.Time)]
-        public DateTime Fim { get; set; }
+        
+        public string Fim { get; set; }
 
-
-
+        [Display(Name = "Funcionário")]
+        [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
         public virtual Funcionario _Funcionario { get; set; }
 
     }
