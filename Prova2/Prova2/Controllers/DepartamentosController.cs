@@ -41,8 +41,8 @@ namespace Prova2.Controllers
         public ActionResult Create()
         {
             ViewBag.CargoID = new SelectList(db.Cargoes, "CargoID", "Nome");
-            ViewBag.FuncionarioID = new SelectList(db.Funcionarios, "FuncionarioID", "FuncionarioID");
-            ViewBag.SupervisorID = new SelectList(db.Funcionarios, "FuncionarioID", "FuncionarioID");
+            ViewBag.FuncionarioID = new SelectList(db.Funcionarios, "FuncionarioID", "Nome");
+            ViewBag.SupervisorID = new SelectList(db.Funcionarios, "FuncionarioID", "Nome");
             return View();
         }
 
@@ -61,8 +61,8 @@ namespace Prova2.Controllers
             }
 
             ViewBag.CargoID = new SelectList(db.Cargoes, "CargoID", "Nome", departamento.CargoID);
-            ViewBag.FuncionarioID = new SelectList(db.Funcionarios, "FuncionarioID", "FuncionarioID", departamento.FuncionarioID);
-            ViewBag.SupervisorID = new SelectList(db.Funcionarios, "FuncionarioID", "FuncionarioID", departamento.SupervisorID);
+            ViewBag.FuncionarioID = new SelectList(db.Funcionarios, "FuncionarioID", "Nome", departamento.FuncionarioID);
+            ViewBag.SupervisorID = new SelectList(db.Funcionarios, "FuncionarioID", "Nome", departamento.SupervisorID);
             return View(departamento);
         }
 
@@ -79,8 +79,8 @@ namespace Prova2.Controllers
                 return HttpNotFound();
             }
             ViewBag.CargoID = new SelectList(db.Cargoes, "CargoID", "Nome", departamento.CargoID);
-            ViewBag.FuncionarioID = new SelectList(db.Funcionarios, "FuncionarioID", "FuncionarioID", departamento.FuncionarioID);
-            ViewBag.SupervisorID = new SelectList(db.Funcionarios, "FuncionarioID", "FuncionarioID", departamento.SupervisorID);
+            ViewBag.FuncionarioID = new SelectList(db.Funcionarios, "FuncionarioID", "Nome", departamento.FuncionarioID);
+            ViewBag.SupervisorID = new SelectList(db.Funcionarios, "FuncionarioID", "Nome", departamento.SupervisorID);
             return View(departamento);
         }
 
@@ -98,8 +98,8 @@ namespace Prova2.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.CargoID = new SelectList(db.Cargoes, "CargoID", "Nome", departamento.CargoID);
-            ViewBag.FuncionarioID = new SelectList(db.Funcionarios, "FuncionarioID", "FuncionarioID", departamento.FuncionarioID);
-            ViewBag.SupervisorID = new SelectList(db.Funcionarios, "FuncionarioID", "FuncionarioID", departamento.SupervisorID);
+            ViewBag.FuncionarioID = new SelectList(db.Funcionarios, "FuncionarioID", "Nome", departamento.FuncionarioID);
+            ViewBag.SupervisorID = new SelectList(db.Funcionarios, "FuncionarioID", "Nome", departamento.SupervisorID);
             return View(departamento);
         }
 

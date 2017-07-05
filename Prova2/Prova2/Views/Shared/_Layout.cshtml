@@ -12,24 +12,69 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Call center", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                
+                
             </div>
+
+
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Ausências", "Create", "Ausencias")</li>
-                    <li>@Html.ActionLink("Cargos", "Create", "Cargos")</li>
-                    <li>@Html.ActionLink("Departamentos", "Create", "Departamentos")</li>
-                    <li>@Html.ActionLink("Escalas", "Create", "Escalas")</li>
-                    <li>@Html.ActionLink("Funcionários", "Create", "Funcionarios")</li>
-                    <li>@Html.ActionLink("Horas Extras", "Create", "HorasExtras")</li>
-                    <li>@Html.ActionLink("Usuários", "Create", "Usuarios")</li>
-                    <li>@Html.ActionLink("Criar perfil", "Index", "Role")</li>
-                </ul>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Ausências <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Criar", "Create", "Ausencias")</li>
+                  
+                        <li>@Html.ActionLink("Listar", "Index", "Ausencias")</li>
+                    </ul>
+                    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Cargos <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Criar", "Create", "Cargos")</li>
+                       
+                        <li>@Html.ActionLink("Listar", "Index", "Cargos")</li>
+                    </ul>
+                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Departamentos <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Criar", "Create", "Departamentos")</li>
+                        
+                        <li>@Html.ActionLink("Listar", "Index", "Departamentos")</li>
+                    </ul>
+                    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Escalas <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Criar", "Create", "Escalas")</li>
+                        
+                        <li>@Html.ActionLink("Listar", "Index", "Escalas")</li>
+                    </ul>
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Funcionários <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Criar", "Create", "Funcionarios")</li>
+                       
+                        <li>@Html.ActionLink("Listar", "Index", "Funcionarios")</li>
+                    </ul>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Horas Extras <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Criar", "Create", "HorasExtras")</li>
+                        
+                        <li>@Html.ActionLink("Listar", "Index", "HorasExtras")</li>
+                    </ul>
+        
+                   
+                </div>
+
+
+
+
+
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
