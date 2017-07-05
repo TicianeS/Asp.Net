@@ -12,72 +12,79 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                
-                
             </div>
-
-
             <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle"
+                           data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">
+                            Ausências
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Criar", "Create", "Ausencias")</li>
+
+                            <li>@Html.ActionLink("Listar", "Index", "Ausencias")</li>
+                        </ul>
+                    </li>
+                </ul>
+
                 <div class="btn-group">
                     <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Ausências <span class="caret"></span>
                     </button>
-                    <ul class="dropdown-menu">
-                        <li>@Html.ActionLink("Criar", "Create", "Ausencias")</li>
-                  
-                        <li>@Html.ActionLink("Listar", "Index", "Ausencias")</li>
-                    </ul>
+                    <ul class="dropdown-menu"></ul>
+                </div>
+                <div class="btn-group">
                     <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Cargos <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
                         <li>@Html.ActionLink("Criar", "Create", "Cargos")</li>
-                       
+
                         <li>@Html.ActionLink("Listar", "Index", "Cargos")</li>
                     </ul>
-                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Departamentos <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li>@Html.ActionLink("Criar", "Create", "Departamentos")</li>
-                        
-                        <li>@Html.ActionLink("Listar", "Index", "Departamentos")</li>
-                    </ul>
-                    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Escalas <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li>@Html.ActionLink("Criar", "Create", "Escalas")</li>
-                        
-                        <li>@Html.ActionLink("Listar", "Index", "Escalas")</li>
-                    </ul>
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Funcionários <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li>@Html.ActionLink("Criar", "Create", "Funcionarios")</li>
-                       
-                        <li>@Html.ActionLink("Listar", "Index", "Funcionarios")</li>
-                    </ul>
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                </div>
+                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Departamentos <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>@Html.ActionLink("Criar", "Create", "Departamentos")</li>
+
+                    <li>@Html.ActionLink("Listar", "Index", "Departamentos")</li>
+                </ul>
+                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Escalas <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>@Html.ActionLink("Criar", "Create", "Escalas")</li>
+
+                    <li>@Html.ActionLink("Listar", "Index", "Escalas")</li>
+                </ul>
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Funcionários <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>@Html.ActionLink("Criar", "Create", "Funcionarios")</li>
+
+                    <li>@Html.ActionLink("Listar", "Index", "Funcionarios")</li>
+                </ul>
+                @*<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Horas Extras <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
                         <li>@Html.ActionLink("Criar", "Create", "HorasExtras")</li>
-                        
+
                         <li>@Html.ActionLink("Listar", "Index", "HorasExtras")</li>
-                    </ul>
-        
-                   
-                </div>
+                    </ul>*@
 
 
-
-
-
-                @Html.Partial("_LoginPartial")
             </div>
+
+            @Html.Partial("_LoginPartial")
         </div>
+    </div>
     </div>
     <div class="container body-content">
         @RenderBody()
