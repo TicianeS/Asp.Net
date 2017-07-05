@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Modelos
 {
@@ -19,19 +20,19 @@ namespace Modelos
         public string Data { get; set; }
 
         [Display(Name = "Funcionário")]
-        [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
+        [ForeignKey("_Funcionario")]
         public int FuncionarioID { get; set; }
 
         [Display(Name = "Escala")]
-        [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
+        [ForeignKey("_Ausencia")]
         public int AusenciaID { get; set; }
 
         [Display(Name = "Funcionário")]
-        [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
+        
         public virtual Funcionario _Funcionario { get; set; }
 
         [Display(Name = "Funcionário")]
-        [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
+        
         public virtual Ausencia _Ausencia { get; set; }
 
 

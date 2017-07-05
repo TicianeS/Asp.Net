@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Modelos
 {
@@ -14,7 +15,7 @@ namespace Modelos
         public int HoraExtraID { get; set; }
 
         [Display(Name = "Matrícula do Funcionário")]
-        [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
+        [ForeignKey("_Funcionario")]
         public int FuncionarioID { get; set; }
 
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
@@ -23,13 +24,10 @@ namespace Modelos
 
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
         [RegularExpression("^([0-1][0-9]|2[0-3]):[0-5][0-9]$", ErrorMessage = "O horário deve ter o formato 00:00")]
-
-       
         public string Horas { get; set; }
 
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
-        [RegularExpression("^([0-1][0-9]|2[0-3]):[0-5][0-9]$", ErrorMessage = "O horário deve ter o formato 00:00")]
-       
+        [RegularExpression("^([0-1][0-9]|2[0-3]):[0-5][0-9]$", ErrorMessage = "O horário deve ter o formato 00:00")]      
         public string Inicio { get; set; }
 
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
@@ -38,7 +36,6 @@ namespace Modelos
         public string Fim { get; set; }
 
         [Display(Name = "Funcionário")]
-        [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
         public virtual Funcionario _Funcionario { get; set; }
 
     }

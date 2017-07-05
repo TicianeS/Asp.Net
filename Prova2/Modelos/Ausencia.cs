@@ -18,7 +18,7 @@ namespace Modelos
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
-        [StringLength(3, MinimumLength = 2, ErrorMessage = "Tamanho máximo de 3 caracteres")]
+        [StringLength(3, MinimumLength = 1, ErrorMessage = "Tamanho máximo de 3 caracteres")]
         public string Sigla { get; set; }
 
 

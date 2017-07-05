@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,11 +15,10 @@ namespace Modelos
         public int UsuarioID { get; set; }
 
         [Display(Name = "Nome do Funcionário")]
-        [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
+        [ForeignKey("_Funcionario")]
         public int FuncionarioID { get; set; }
 
         [Display(Name = "Nome do Funcionário")]
-        [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
         public virtual Funcionario _Funcionario { get; set; }
 
         [Required(ErrorMessage = "Campo de preenchimento obrigatório")]
