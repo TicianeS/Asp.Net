@@ -78,6 +78,22 @@ namespace Prova2.Controllers
             return View(usuario);
         }
 
+        [HttpPost]
+        public ActionResult Logar(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Usuario usuario = db.Usuarios.Find(id);
+            if (usuario == null)
+            {
+                return HttpNotFound();
+            }
+            ViewBag.FuncionarioID = new SelectList(db.Funcionarios, "FuncionarioID", "Nome", usuario.FuncionarioID);
+            return View(usuario);
+        }
+
         // POST: Usuarios/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.

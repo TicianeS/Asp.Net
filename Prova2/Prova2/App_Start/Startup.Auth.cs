@@ -58,11 +58,11 @@ namespace Prova2
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "1093943293837-2raookhrktqjmq4bae9djjhcflo209fq.apps.googleusercontent.com",
+                ClientSecret = "wkqo6KOCCMsTmTTVaFs0ygxx  "
+            });
         }
     }
 }
